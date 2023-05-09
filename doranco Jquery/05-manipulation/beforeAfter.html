@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>05. Before/After-jQuery</title>
+    <style>
+        .btn{
+            background-color: rgb(84, 167, 95);
+            border-radius: 10px;
+            padding: 10px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1> La méthode jQuery before() et after() </h1>
+
+
+    <p> Comment appliquer cette méthode</p>
+
+    <button class="btn"> Changement </button>
+
+    <script src="./assets/JS/jQuery-3.6.4.mini.js"></script>
+    
+    <script>
+
+        $(() => {
+            $('button').click(function() {
+
+                /* Pour insérer du contenu avant ou après un élément, on utiliser l'une des méthodes jQuery 'before()' ou 'after())'. Celle ci vont respectivement nous permettre d'ajouter du contenu avant et après une sélection d'éléments. Le contenu à ajouter devras être passé en argument */
+                $('h1')
+                    .before($('p'))
+                    .after('<img src="./assets/img/image7.jpg">') ;
+
+            })
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01-installation Jquery</title>
+</head>
+<body>
+    <p></p>
+    <h1>Ce jQuery est mal chargé</h1>
+    <div></div>
+    <!-- premeire méthode avec une copie locale. Pour utiliser jQuery, on telecharge a partir https://jquery.com/download/ et l'inclure dans l'attribut src -->
+    <script src="JS/jQuery-3.6.4.mini.js"></script>
+
+    <!-- seconde méthode. SERVEUR PUBLIC (GOOGLE). Tlecharger le lien suivant https://developers.google.com/speed/libraries?hl=fr#jquery -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
+
+    <script>
+        // version la plus utilisé et la plus connue que l'on traduit par : 'lorsque mon document prêt ...'
+        $(document).ready(() => {
+            console.log('jQuery actif') ;
+            $('p').html("Ce jQuery est bien chargé !!!") ;
+
+            $('h1').html("je Confirme, ce jQuery est bien chargé !!") ;
+
+            $('p').append(' ,je rajoute du text a mon paragraphe') ;
+            console.log($('script')) ;
+            $('script:eq(0)').before("<h2>autre test</h2>");
+            $('div').append("<h2>test de mon titre 2</h2>");
+            
+        });
+    </script>
+</body>
+</html>

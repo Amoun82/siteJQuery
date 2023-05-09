@@ -1,0 +1,17 @@
+section {
+    width: 700px;
+    margin: 0 auto;
+    background-color: lightcoral;
+    min-height: 550px;
+    text-align: center;
+}
+
+section h1 {
+    border: 3px solid black;
+    text-align: center;
+}
+
+img {
+    margin: 0 auto;
+    display: none;
+}

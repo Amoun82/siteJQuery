@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+fieldset {
+    margin: 30px 0;
+}
+
+#info {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    background-color: burlywood;
+    color: black;
+    padding: 5px;
+    margin-bottom: 30px;
+}
+
+.titre {
+    font-weight: bold ;
+    padding: 10px;
+    margin: 10px;
+}
+
+.zone1, .zone2, .zone3, .zone4, .zone5, .zone6, .zone7, .zone8, .zone9 {
+    background-color: lightcoral;
+    padding: 20px;
+    margin: 20px;
+}
+
+input, textarea,  select {
+    width: 100%;
+    padding: 5px;
+}

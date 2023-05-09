@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tp jQuery</title>
+    <style>
+        .div1{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+
+        .exo3{
+            width: 250px;
+            height: 250px;
+        }
+
+        .exo4 div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="conteneur">
+
+        <!-- exercice 1 -->
+        <div class="exo1">
+
+            
+            <div class="div1">
+                
+            </div>
+            
+            <br>
+            
+            <button id="btn1"> change </button>
+        </div>
+        
+        <hr>
+
+        <!-- exercice 2 -->
+        <div class="exo2">
+
+            <img width="100px" height="100px" src="https://www.pierre-giraud.com/wp-content/uploads/2019/08/jquery-cours.png" alt="imageClick">
+
+        </div>
+
+        <hr>
+
+        <!-- exercice 3 -->
+        <div class="exo3">
+
+            <input type="color" name="" id="">
+
+        </div>
+
+        <hr>
+
+        <!-- exercice 4 -->
+        <div class="exo4">
+
+            <div>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <!-- exerice 5 -->
+        <div class="exo5">
+
+            <img src="" alt="">
+
+        </div>
+        
+    </div>
+
+
+
+    <script src="./assets/JS/jQuery-3.6.4.mini.js"></script>
+
+    <script>
+
+        $(() => {
+
+
+            console.log('test jQuery') ;
+
+            // exo 1
+            $('#btn1').click(function() {
+                $('.div1').css('background-color', 'green') ;
+                console.log('test')
+            })
+
+            // exo 2
+            $('img[alt=imageClick]').click(function () { 
+                console.log('test click') ;
+
+                $('img[alt=imageClick]').css({'width': '+=20px', 'height': '+=20px'}) ;
+                
+            }); ;
+
+
+            console.log($('input[type=color]'))
+
+            // exo 3
+            $('input[type=color]').on('input color' ,function () { 
+                console.log('test change color') ;
+                console.log($(this)) ;
+                console.log($(this).val()) ;
+                let color = $('input[type=color]').val() ;
+                //$('.exo3').css('background-color', $(this).val());
+                $('.exo3').css('background-color', color);
+            });
+
+            // exo 4
+            console.log($('.exo4 div')) ;
+            $('.exo4 div').click(() => {
+                console.log('click dans la div');
+                $('.exo4 div').css({'width': '200px', 'height': '200px'}) ;
+            }) ;
+
+            // exo 5
+            let compteur = 1;
+            setInterval(() => {
+                    
+                if(compteur <= 6 )
+                {
+                    console.log(compteur) ;
+                    compteur++ ;
+                    $('.exo5 img').attr('src', `./assets/img/image${compteur}.jpg`);
+                }else{
+                    compteur = 1 ;
+                    clearInterval();
+                }
+            }, 1000);
+
+        })
+
+    </script>
+
+</body>
+</html>

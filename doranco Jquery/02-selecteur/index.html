@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02-selecteur jQuery</title>
+</head>
+<body>
+
+    <h1>Titre 1</h1>
+
+    <div class="perso"> Mario </div>
+    <div class="perso"> Luigi </div>
+    <div class="perso"> Bowser </div>
+
+    <div class="bieres"> Desperados </div>
+    <div class="bieres"> JenLain </div>
+    <div class="bieres"> 1994 </div>
+
+    <table>
+
+        <tr>
+            <td> TO #1 </td>
+            <td> TO #2 </td>
+            <td> TO #3 </td>
+        </tr>
+
+        <tr>
+            <td> TO #4 </td>
+            <td> TO #5 </td>
+            <td> TO #6 </td>
+        </tr>
+
+        <tr>
+            <td> TO #7 </td>
+            <td> TO #8 </td>
+            <td> TO #9 </td>
+        </tr>
+
+    </table>
+
+    <section id="maSection"> ma super section </section>
+
+    <article> mon article</article>
+    <hr>
+
+    <form action="">
+        <label for="pseudo">pseudo</label>
+        <input type="text" id="pseudo">
+    </form>
+
+    <img src="assets/img/logo.png" alt="logo">
+    <img src="assets/img/logo.png" alt="logo">
+    <img src="assets/img/logo.png" alt="logo">
+
+    <img src="assets/img/logo.png" alt="laga">
+
+    <script src="JS/jQuery-3.6.4.mini.js"></script>
+
+    <script>
+        $(() => {
+
+            console.log('test Jquery') ;
+
+            // SELECTION BALISE
+            let maBalise = $('article') ;
+            console.log('Ma Balise : '+ maBalise) ;
+
+            //on selection la balise article stockée dans la variable 'maBalise'  et la méthode jQuery 'css()' qui permet de modifier la mise en forme
+
+            //            .css('propiété', 'valeur') ;
+            // $(maBalise).css('color', 'red') ;
+
+            // nous pouvons mettre plusieurs propriété CSS
+            /* width : max-content place le background-color juste a l'espace  */
+            $(maBalise).css({'color': 'blue', 'background-color': 'brown', 'width':'max-content' }) ;
+
+            // SELECTION ID
+            let monID = $('#maSection') ;
+            $(monID).css('font-size', '4em') ;
+
+            // SELECTION CLASS
+            $('.perso').css({'font-family': 'Segoe UI', 'font-size': '3em', 'color': 'green'})
+
+            // On selectionne la premiere div avec first pour mettre une couleur jaune au text
+            $('.perso:first').css('color', 'yellow') ;
+
+            // On selectionne la deuxieme div avec la méthode 'eq()', '1' représente l'indice lié à l'element
+            $('.perso:eq(1)').css('color', 'cadetblue') ;
+
+            // SELECTION MULTIPLE
+            // On selectionne plusieurs élements ( balise, class, id) et on les stocke dans la variable 'mesElements'
+            let mesElements = $('h1, article, .bieres') ;
+            mesElements.css('font-size', 50) ;
+
+            // SELECTION TYPE(form)
+            let mesTypes = $(':text') ;
+
+            // autre forme d'écriture pour sélectionner un input de type 'text'
+            // let mesTypes = $('input[type=text]') ;
+            $(mesTypes).css('background-color', 'burlywood') ;
+
+
+            // SELECTION ATTRIBUT
+            let attribut = $('img[alt]') ;
+            attribut.css('height',300) ;
+
+            // differente façon de selection d'une balise
+            $('img:first').css('height',50) ;
+
+            $('img:eq(2)').css('height', 30) ;
+
+            $('img[alt=laga]').css('height', 100) ;
+
+            // EXO: faites en sorte d'ajouter un background avec la couleur de votre choix à la cellule #2 de votre tableau
+
+            let cellule = $('table tr td')
+            console.log(cellule);
+            $(cellule[2]).css('background-color', 'orange')
+
+            // facon plus rapide avec la cellule 3
+            $('td:eq(3)').css('background-color', 'grey')
+
+            // RESUMER DES PRINCIPAUX SELECTEURS
+
+            /* 
+                Selection de balise : $('span') 
+                Selection d'un 'id' : $('#id')
+                Selection d'une 'class' : $('.class')
+                Selection d'un élément par lui-même : $this
+                Selection d'un élément par sa balise et son type: $('input:text')
+                Selection d'un élément par sont type seulement (ex: tous les types 'radio') : $(':radio')
+                Selection d'un élément par son attribut : $('img[alt]')
+                Selection de plusieurs selecteurs EN MEME TEMPS: $('h1, p, #id')
+            */
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./assets/CSS/removeClass.css">
+    <title>05. RemoveClass-jQuery</title>
+</head>
+<body>
+    
+    <div class="conteneur">
+
+
+        <h1 class="rouge"> Ce titre va perdre sa classe </h1>
+        <div class="bleu rose"></div>
+        <p class="orange"> Ce texte est en orange </p>
+        <p id="grand" class="grandis"> Fais moi rétrécir </p>
+
+        <button class="btn"> Clic pour éteindre les styles </button>
+
+        <script src="./assets/JS/jQuery-3.6.4.mini.js"></script>
+        <script>
+
+            $(document).ready(function() {
+
+                $('button').click(function() {
+
+                    // La méthode jQuery 'toggleClass()' permet d'ajouter et de supprimer des classes affiliées a des éléments déclarer dans le DOM
+                    $('h1').toggleClass('rouge') ;
+                    $('.bleu').toggleClass('rose').text('bleu') ;
+                    $('p:first').toggleClass('orange').text('plus maintenant') ;
+                    $('#grand').toggleClass('grandis') ;
+                })
+
+            })
+
+        </script>
+
+    </div>
+
+</body>
+</html>

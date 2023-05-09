@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/fondu.css">
+    
+    <title>04. Effets du fondu-jQuery</title>
+</head>
+<body>
+    
+    <div class="conteneur">
+        <h1> Les animations - Effets de fondu </h1>
+
+        <h2> Les animations FADE </h2>
+
+        <button id="fadeIn" class="btn"> FADE APPARITION </button>
+
+        <div id="rouge" style="display: none;" class="rouge"></div>
+        <div id="bleu" style="display: none;" class="bleu"></div>
+        <div id="vert" style="display: none;" class="vert"></div>
+
+        <hr>
+
+        <button id="fadeOut" class="btn"> FADE DISPARITION </button>
+
+        <div id="rouge2" class="rouge"></div>
+        <div id="bleu2" class="bleu"></div>
+        <div id="vert2" class="vert"></div>
+
+        <hr>
+
+        <button id="fadeToggle" class="btn"> FADE TOOGLE </button>
+
+        <div id="rouge3" class="rouge"></div>
+        <div id="bleu3" class="bleu"></div>
+        <div id="vert3" class="vert"></div>
+
+        <hr>
+
+        <button id="fadeTo" class="btn"> FADE OPACITY ON </button>
+        <button id="fadeTo2" class="btn"> FADE OPACITY OFF </button>
+        
+        <br><br>
+
+        <form action="" id="formulaire" style="opacity: 0;">
+            <label for="pseudo"> Pseudo </label>
+            <input type="text" id="pseudo">
+
+            <label for="password"> Mot de passe </label>
+            <input type="password" id="password">
+        </form>
+
+        <div id="jaune" class="jaune"></div>
+        <div id="violet" class="violet"></div>
+
+        <hr>
+
+        <h2> Les animations "SLIDE" </h2>
+
+        <div id="barre" style="cursor:pointer;" class="barre"> Cliquez pour descendre le rideau</div>
+        <div id="barreUp" style="cursor:pointer;" class="barre"> Cliquez pour remonter le rideau</div>
+        <div id="barreUpDown" style="cursor:pointer;" class="barre"> Cliquez pour descendre et remonter le rideau</div>
+        <div id="barreMouseOver" style="cursor:pointer;" class="barre"> Survolez pour descendre et remonter le rideau</div>
+        <div id="rideau" style="display:none;" class="rideau"> Rideau déroulé </div>
+
+        <hr>
+
+        <button class="btn" id="btn-simple"> Simple </button>
+        <div class="rouge" id="simple" style="position:relative;"> Animation Simple </div>
+
+        <hr>
+
+        <button class="btn" id="btn-double"> Simple </button>
+        <div class="bleu" id="double" style="position:relative;"> Animation Double </div>
+
+        <hr>
+
+        <button class="btn" id="btn-etape"> Simple </button>
+        <div class="vert" id="etape" style="position:relative;"> Animation Etape </div>
+
+        <hr>
+
+        <button class="btn" id="btn-etape2"> Simple </button>
+        <div class="jaune" id="etape2" style="position:relative;"> Animation Etape </div>
+
+        <hr>
+
+        <button class="btn" id="btn-etape3"> Simple </button>
+        <div class="violet" id="etape3" style="position:relative;"> Animation Etape </div>
+
+        <hr>
+
+        <h2> Si tu cliques sur le carré, je vais disparaire </h2>
+        <div id="div1" style="border: 1px solid black; width: 150px; height: 150px; background-color: lightseagreen;"></div>
+
+        <img style="width: 100px; height: 100px;" src="./assets//img/image1.jpg" alt="">
+
+        <hr>
+
+        <form action="" id="formulaire1">
+            <label for="pseudo1"> Pseudo </label>
+            <input type="text" id="pseudo1">
+        </form>
+
+        <hr>
+
+        <button class="btn" id="onOFF"> ON /OFF </button>
+        <p>ceux ci est mon text a faire disparaître</p>
+    </div>
+
+    <script src="./assets/JS/jQuery-3.6.4.mini.js"></script>
+    <!-- jQuery Color -->
+    <script src="https://code.jquery.com/color/jquery.color-2.2.0.min.js" integrity="sha256-aSe2ZC5QeunlL/w/7PsVKmV+fa0eDbmybn/ptsKHR6I=" crossorigin="anonymous"></script>
+    <script src="./assets/JS/fondu.js"></script>
+
+</body>
+</html>

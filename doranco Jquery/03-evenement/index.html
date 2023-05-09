@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./assets/css/evenement.css">
+
+    <title>03  Evenement jQuery</title>
+</head>
+<body>
+    
+    <div id="info">je ne fais rien... </div>
+    <br><br>
+
+    <fieldset>
+        <p class="titre"> 1. MOUSEOVER - SURVOLEZ LA ZONE </p>
+        <div class="zone1"> zone 1 </div>
+    </fieldset>
+
+    <fieldset>
+        <p class="titre"> 2. MOUSEOUT - QUITTEZ LA ZONE 2 APRES L'AVOIR SURVOLEZ </p>
+        <div class="zone2"> zone 2 </div>
+    </fieldset>
+
+    <fieldset>
+        <p class="titre"> 3. MOUSEOVER  ET MOUSEOUT - ENTRER ET SORTIR DE LA ZONE 3 </p>
+        <div class="zone3"> zone 3 </div>
+    </fieldset>
+
+    <fieldset>
+        <p class="titre"> 4. CLICK - CLIQUER SUR LA ZONE 4 </p>
+        <div class="zone4"> zone 4 </div>
+    </fieldset>
+
+    <fieldset>
+        <p class="titre"> 5. DBLCLICK - DOUBLE-CLIQUER SUR LE ZONE 5 </p>
+        <div class="zone5"> zone 5 </div>
+    </fieldset>
+
+    <fieldset>
+        <p class="titre"> 6. CONTEXTMENU - CLIQUER DROIT SUR LA ZONE 6 </p>
+        <div class="zone6"> zone 6 </div>
+    </fieldset>
+
+    <form action="">
+        <fieldset>
+            <p class="titre">
+                7. BLUR - CLIQUER AILLEURS APRES AVOIR CLIQUER SUR CET ELEMENT (ZONE 7)
+            </p>
+            <input type="text" placeholder="prenom-zone7" class="zone7">
+        </fieldset>
+
+        <fieldset>
+            <p class="titre">
+                8. CHANGE - SELECTIONNER UNE AUTRE OPTION (ZONE 8)
+            </p>
+            <select class="zone8">
+                <option disabled selected> zone 8 - Choisir une autre option </option>
+                <option> France </option>
+                <option> Italie </option>
+                <option> Espagne </option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <p class="titre"> 9. KEYDOWN + KEYUP - APPUYER ET RELACHER  UNE TOUCHE DU CLAVIER (ZONE 9) </p>
+            <textarea class="zone9" placeholder="commentaire"></textarea>
+        </fieldset>
+    </form>
+
+    <script src="./assets/js/jQuery-3.6.4.mini.js"></script>
+
+    <script src="./assets/js/evenement.js"></script>
+
+</body>
+</html>

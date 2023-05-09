@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>TP Calculatrice</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        #container{
+            width: 80%;
+            margin: 0 auto;
+            background-color: dodgerblue;
+            color: white;
+            padding: 50px;
+            margin-top: 20px;
+        }
+        .cacher{
+            display: none;
+        }
+        .montrer{
+            display: block;
+        }
+        #info{
+            background: gold;
+            color: dodgerblue;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#" id="montre">Faire apparaitre</a>
+    /
+    <a href="#" id="cache">Faire disparaitre</a>
+    <br>
+    <a href="#" id="toggle">Toggle</a>
+    <div id="container" class="test">
+        <form name="formulaire" id="formulaire">
+            <label for="saisie1">Saisie 1</label>
+            <input type="text" name="saisie1" id="saisie1">
+            <select name="operateur">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+            <label for="saisie2">Saisie 2</label>
+            <input type="text" name="saisie2" id="saisie2">
+            <input type="submit" name="bouton" value="OK">
+        </form>
+        <p id="info"></p>
+    </div>
+    
+    <script src="./assets/JS/jQuery-3.6.4.mini.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            console.log('test jQuery') ;
+
+            console.log($('input:eq(2)'));
+            $('input:eq(2)').click(function() {
+                event.preventDefault();
+                console.log('test click') ;
+                console.log($('#saisie1').val()) ;
+
+                if(isNaN($('#saisie1').val()) == true || isNaN($('#saisie2').val()) == true )
+            {
+                console.log('un des deux termes n\'est pas un nombre') ;
+                alert('Attention vous n\'avez pas mis de nombre dans les cases !!')
+            }
+            else
+            {
+                let terme1 = parseFloat($('#saisie1').val()) ;
+                let terme2 = parseFloat($('#saisie2').val()) ;
+                let operateur = $('select').val() ;
+                console.log('somme') ;
+                switch (operateur) {
+                    case '+':
+                        alert(`${terme1} ${operateur} ${terme2} = ${terme1+terme2}`)
+                        break;
+                
+                    case '-':
+                        alert(`${terme1} ${operateur} ${terme2} = ${terme1-terme2}`)
+                        break;
+                
+                    case '*':
+                        alert(`${terme1} ${operateur} ${terme2} = ${terme1*terme2}`)
+                        break;
+    
+                    case '/':
+                        alert(`${terme1} ${operateur} ${terme2} = ${terme1/terme2}`)
+                        break;
+    
+                    default:
+                        break;
+                }
+            }
+
+            })
+
+            console.log($('#montre')) ;
+
+            
+            $('#cache').click(function (e) { 
+                e.preventDefault();
+                console.log('test cacher') ;
+                $('#container').addClass('cacher');
+                $('#container').removeClass('montrer');
+            });
+
+            $('#montre').click(function (e) { 
+                e.preventDefault();
+                console.log('test montrer') ;
+                $('#container').addClass('montrer');
+                $('#container').removeClass('cacher');
+            });
+
+
+            $('#toggle').click(function(e) {
+                e.preventDefault();
+                console.log('test toggle') ;
+
+                console.log($('#container').hasClass('cacher'));
+                if($('#container').hasClass('montrer') == true)
+                {
+                    $('#container').removeClass('montrer');
+                }
+                
+                $('#container').toggleClass('cacher');
+            })
+
+
+            console.log($('#saisie1')) ;
+
+            
+            $('#saisie1').hover(function () {
+                    // over
+                    console.log('test over') ;
+                    console.log($('#info')) ;
+                    $('#info').text('saisir un chiffre') ;
+                    
+                }, function () {
+                    // out
+                    console.log('test out')
+                    $('#info').text('') ;
+                }
+            );
+
+            $('#saisie2').hover(function () {
+                    // over
+                    console.log('test over') ;
+                    console.log($('#info')) ;
+                    $('#info').text('saisir un chiffre') ;
+                    
+                }, function () {
+                    // out
+                    console.log('test out')
+                    $('#info').text('') ;
+                }
+            );
+
+
+            $('select').hover(function () {
+                    // over
+                    console.log('test over') ;
+                    console.log($('#info')) ;
+                    $('#info').text('selectionner un opérateur : + - * /') ;
+                    
+                }, function () {
+                    // out
+                    console.log('test out')
+                    $('#info').text('') ;
+                }
+            );
+
+
+
+
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/portfolio.css">
+    <title>04. portfolio-Animate()-jQuery</title>
+</head>
+<body>
+    
+    <fieldset>
+        <legend> Portfolio </legend>
+        <ul class="hover_block">
+            <li>
+                <h2> Projet 1 </h2>
+                <a href=""><img src="./assets/img/image1.jpg" alt=""> 1. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex consequatur dolorum mollitia sunt unde saepe voluptas alias qui iure similique, doloremque fugit repellat! Quibusdam nemo doloribus sed optio labore dolorum.</a>
+            </li>
+            <li>
+                <h2> Projet 2 </h2>
+                <a href=""><img src="./assets/img/image2.jpg" alt=""> 2. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex consequatur dolorum mollitia sunt unde saepe voluptas alias qui iure similique, doloremque fugit repellat! Quibusdam nemo doloribus sed optio labore dolorum.</a>
+            </li>
+            <li>
+                <h2> Projet 3 </h2>
+                <a href=""><img src="./assets/img/image3.jpg" alt=""> 3. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex consequatur dolorum mollitia sunt unde saepe voluptas alias qui iure similique, doloremque fugit repellat! Quibusdam nemo doloribus sed optio labore dolorum.</a>
+            </li>
+            <li>
+                <h2> Projet 4 </h2>
+                <a href=""><img src="./assets/img/image4.jpg" alt=""> 4. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex consequatur dolorum mollitia sunt unde saepe voluptas alias qui iure similique, doloremque fugit repellat! Quibusdam nemo doloribus sed optio labore dolorum.</a>
+            </li>
+            <li>
+                <h2> Projet 5 </h2>
+                <a href=""><img src="./assets/img/image5.jpg" alt=""> 5. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex consequatur dolorum mollitia sunt unde saepe voluptas alias qui iure similique, doloremque fugit repellat! Quibusdam nemo doloribus sed optio labore dolorum.</a>
+            </li>
+            
+        </ul>
+    </fieldset>
+
+    <script src="./assets/JS/jQuery-3.6.4.mini.js"></script>
+    <script>
+
+        $(document).ready(function() {
+
+            $('ul.hover_block li').hover(function() {
+                // 'find()' renvoie tous les éléments 'img' qui sont des descendants de '<li>'
+                $(this).find('img').animate({ opacity: 0.1}, 200) ;
+
+            }, function() {
+
+                $(this).find('img').animate({ opacity: 1}, 300) ;
+
+            });
+
+        }) ;
+
+    </script>
+</body>
+</html>

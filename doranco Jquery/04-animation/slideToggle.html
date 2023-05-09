@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/slideToggle.css">
+    <title>04. SlideToggle-jQuery</title>
+</head>
+<body>
+
+    <section>
+        <article>
+            <h1>JQUERY SlideToggle</h1>
+        </article>
+        <div>
+            <button> Cliquez ici </button>
+            <br>
+            <img src="./assets/img/image1.jpg" alt="image1">
+            <img src="./assets/img/image2.jpg" alt="image2">
+            <img src="./assets/img/image3.jpg" alt="image3">
+        </div>
+    </section>
+
+    <script src="./assets/JS/jQuery-3.6.4.mini.js"></script>
+
+    <script>
+
+        $('button').click(function () {
+
+            // quand je clique sur l'élément 'button', les images se déroulent ou se réduisent grace a la méthode jQuery 'slidetoggle()'. on peut définir entre parenthèse la duréee de transition (en millisecondes). On peut aussi utiliser les mots clée 'slow' (600ms) ou 'fast' (200ms)
+            $('img').slideToggle('slow') ;
+
+        })
+
+    </script>
+    
+</body>
+</html>

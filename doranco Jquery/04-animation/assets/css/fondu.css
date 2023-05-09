@@ -1,0 +1,52 @@
+.conteneur {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.btn {
+    background-color: cadetblue;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+}
+
+.rouge, .bleu, .vert, .jaune, .violet {
+    width: 300px;
+    height: 100px;
+    margin: 10px 0;
+}
+
+
+.barre, .rideau {
+    width: 500px;
+}
+
+.barre {
+    height: 50px;
+    background-color: orange;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.rideau {
+    height: 300px;
+    background-color: orange;
+}
+
+.rouge {
+    background-color: red;
+}
+.bleu {
+    background-color: blue;
+}
+.vert {
+    background-color: green;
+}
+.jaune {
+    background-color: yellow;
+}
+.violet {
+    background-color: purple;
+}
+
+

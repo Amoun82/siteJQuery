@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/carre.css">
+    <title>04. Carré Animate() - jQuery</title>
+</head>
+<body>
+    <section>
+        <article>
+            <h1> JQUERY - Animate() </h1>
+        </article>
+
+        <div id="div_vert"> Contenu </div>
+    </section>
+
+    <script src="./assets/JS/jQuery-3.6.4.mini.js"></script>
+    
+    <!-- jQuery Color -->
+    <script src="https://code.jquery.com/color/jquery.color-2.2.0.min.js" integrity="sha256-aSe2ZC5QeunlL/w/7PsVKmV+fa0eDbmybn/ptsKHR6I=" crossorigin="anonymous"></script>
+    
+    <script>
+        $(document).ready(function() {
+
+            // On sélectionne la div '#div_vert' et on ésecute la méthode jQuery 'animate()'
+            $('#div_vert').animate({
+                
+                // 'marinTop, width, height' => propriété de la méthode 'animate()'
+                marginTop: '20px',
+                width: '500px',
+                height: '500px',
+
+                // Cette instruction est inutilisable à moins d'insérer l'extension 'jQueryColor' dans le script
+                backgroundColor: 'yellow'
+
+                // la durée de transition exprimée en miliisecondes (2000ms=2s)
+            }, 2000)
+
+        }) ;
+
+    </script>
+
+</body>
+</html>

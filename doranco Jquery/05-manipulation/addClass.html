@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/CSS/addClass.css">
+    <title>05. AddClass()-jQuery</title>
+</head>
+<body>
+    
+    <div class="conteneur">
+        <h1>Ce titre va devenir rouge</h1>
+        <div class="bleu"></div>
+        <p> Ce texte vas devenir orange </p>
+        <p id="grand"> Fais-moi grandir en plus d'être orange </p>
+
+        <hr>
+
+        <button class="btn"> Clic pour le changement </button>
+    </div>
+
+    <script src="./assets/JS/jQuery-3.6.4.mini.js"></script>
+    <script>
+
+        $(document).ready(() => {
+
+            $('button').click(function() {
+                
+                // la méthode jQuery 'addClass()' permet d'affecter des classes à des éléments déclarés dans le DOM
+                $('h1').addClass('rouge');
+                $('.bleu').addClass('rose').text('rose') ;
+                $('p').addClass('orange') ;
+                $('#grand').addClass('grandis') ;
+
+            })
+
+
+        }) ;
+
+    </script>
+</body>
+</html>

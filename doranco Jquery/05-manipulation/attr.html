@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05. Attr-jQuery</title>
+
+    <style>
+        #titre {
+            background-color: lightsalmon;
+            border: 1px solid black;
+            border-radius: 5px;
+            width: 400px;
+            margin: 0 auto;
+            padding: 5px;
+        }
+        .btn {
+            background-color: rgba(5, 77, 53, 0.626);
+            border-radius: 10px;
+            text-align: center;
+            padding: 10px;
+        }
+        .entete{
+            width: 100%;
+            background-color: burlywood;
+            height: 10vh;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>logo</header>
+    <h1> La méthode attr()-jQuery </h1>
+    <footer></footer>
+
+    <button class="btn"> Ajouter les attributs </button>
+
+    <script src="./assets/JS/jQuery-3.6.4.mini.js"></script>
+
+    <script>
+
+        $(() => {
+
+            $('button').click(function () {
+
+                // La méthode jQuery 'attr()' permet d'affecter des attributs ('class, id, src, href...') à des éléments sélectionnés dans le DOM
+                $('h1').attr('id', 'titre') ;
+
+                $('header').attr({
+                    'class' : 'entete',
+                    'id': 'enhaut'
+                })
+            })
+
+        })
+
+    </script>
+
+</body>
+</html>
